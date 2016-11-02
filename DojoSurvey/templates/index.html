@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Form Test Index</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styleDojoServey.css')}}" >
+  </head>
+  <body>
+    <div class="wrapper">
+      <form class="user" action="/result" method="post">
+        <label>Your Name:<input type="text" name="YourName"></label>
+        <label>Dojo Location:<select name="Location">
+          <option value="Seattle">Seattle</option>
+          <option value="Hawaii">Hawaii</option>
+          <option value="Spain">Spain</option>
+        </select></label>
+        <label>Favorite Language:<select name="Language">
+          <option value="Python">Python</option>
+          <option value="Ruby">Ruby</option>
+          <option value="Mean">Mean</option>
+        </select></label>
+        <label>Comment (optional):<textarea name="Comment" rows="4" cols="50"></textarea></label>
+        <label><input type="submit" name="submit" value="Button"></label>
+      </form>
+
+    </div><!--wrapper-->
+  </body>
+
+</html>
