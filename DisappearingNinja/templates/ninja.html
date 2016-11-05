@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Disappearing Ninja!</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/ninjaStyle.css')}}" >
+  </head>
+  <body>
+    {% if mutant == True %}
+      <h1>Teenage Mutant Ninja Turtles!</h1>
+      <img src="{{ url_for('static', filename='img/tmnt.png')}}" alt="TMNT" />
+      <h1>Turtles in a half shell!</h1>
+    {% endif %}
+    {% if mutant == False %}
+      {% if color == 'red' %}
+        <h1>Raphael!</h1>
+        <img src="{{ url_for('static', filename='img/raphael.jpg')}}" alt="Raphael" />
+        <h1>Turtle Power!</h1>
+
+      {% elif color == 'orange' %}
+        <h1>Michelangelo!</h1>
+        <img src="{{ url_for('static', filename='img/michelangelo.jpg')}}" alt="Michelangelo" />
+        <h1>Turtle Power!</h1>
+
+      {% elif color == 'blue' %}
+        <h1>Leonardo!</h1>
+        <img src="{{ url_for('static', filename='img/leonardo.jpg')}}" alt="Leonardo" />
+        <h1>Turtle Power!</h1>
+
+      {% elif color == 'purple' %}
+        <h1>Donatello!</h1>
+        <img src="{{ url_for('static', filename='img/donatello.jpg')}}" alt="Donatello" />
+        <h1>Turtle Power!</h1>
+
+      {% elif color == 'sensei' %}
+        <h1>Splinter!</h1>
+        <img src="{{ url_for('static', filename='img/splinter.png')}}" alt="Splinter" />
+        <h1>You have done well!</h1>
+
+      {% else %}
+        <h1>April!</h1>
+        <img src="{{ url_for('static', filename='img/notapril.jpg')}}" alt="April" />
+        <h1>I'm not a turtle!</h1>
+      {% endif %}
+    {% endif %}
+  </body>
+</html>
